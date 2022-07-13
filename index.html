@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="main.js"></script>
+    <style>
+
+        body {
+            background-image: url('img/space.jpg');
+            background-repeat: no-repeat;
+            background-size: 200vw auto;
+            background-position: center;
+        }
+        
+        .my-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 50px 20px;
+            width: 300px;
+            border: 2px solid black;
+            background-color: black;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .my-form-closed {
+            display: none;
+        }
+
+        .my-submit {
+            padding: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        label {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        input[type='text'] {
+            margin-left: auto;
+        }
+
+        .game_field {
+            position: relative;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .card {
+            margin: 5px;
+            border: 2px solid #fff;
+            background-image: url('img/space.jpg');
+            background-size: contain cover;
+            color: transparent;
+            width: 120px;
+            height: 150px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .card--active {
+            color: #fff;
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.6);
+            font-size: 40px;
+            vertical-align: middle;
+        }
+
+        .card--open {
+            color: #fff;
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            font-size: 80px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .restart_btn {
+            display: none;
+            position: absolute;
+            top: calc(100% + 20px);
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            font-size: 20px;
+            color: #fff;
+            border-color: #fff;
+            cursor: pointer;
+        }
+
+        .restart_btn--active {
+            display: block;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        input {
+            background-image: url('img/space.jpg');
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" class="my-form">
+        <label for="vertical">
+            Кол-во карточек по вертикали:
+            <input type="number" class="vertical_quantity" required>
+        </label>
+        <label for="horizontal">
+            Кол-во карточек по горизонтали:
+            <input type="number" class="horizontal_quantity" required>
+        </label>
+        <input class="my-submit" type="submit" value="Начать игру">
+    </form>
+
+    <div class="game_field">
+        <button class="restart_btn">
+            Сыграть ещё раз
+        </button>
+    </div>
+</body>
+</html>
